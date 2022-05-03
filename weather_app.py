@@ -4,6 +4,7 @@ from secrets import key
 
 
 layout = [
+	[sg.Text('Type city name: ', key = '-TITTLE-')],
 	[sg.Input(key = '-INPUT-'), sg.Button('Search', key = '-SEARCH-')],
 	[sg.Text('', key = '-OUTPUT-')]
 ]
@@ -13,7 +14,7 @@ window = sg.Window('Not my Weather App' , layout)
 while True:
 	event, values = window.read()
 	if event == sg.WIN_CLOSED:
-		print('Cya!')
+		print('Goodbye!')
 		break
 	if event == '-SEARCH-':
 		city = values['-INPUT-']
